@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>marks calculator</title>
+</head>
+   
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 mt-5 mb-5">
+                <h1 class="text-center">Marks Calculator.</h1>
+                <form>
+
+                    <div class="form-group row">
+                        <label for="studentname" class="col-sm-2 col-form-label">Student Name</label>
+                        <div class="col-sm-10">
+                            <input type="student Name" class="form-control" id="username">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="subject " class="col-sm-2 col-form-label"> Subject 1</label>
+                        <div class="col-sm-10">
+                            <input type="subject" class="form-control" id="subjectMarks1">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="subject " class="col-sm-2 col-form-label"> Subject 2</label>
+                        <div class="col-sm-10">
+                            <input type="subject" class="form-control" id="subjectMarks2">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="subject " class="col-sm-2 col-form-label"> Subject 3</label>
+                        <div class="col-sm-10">
+                            <input type="subject" class="form-control" id="subjectMarks3">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="subject " class="col-sm-2 col-form-label"> Subject 4</label>
+                        <div class="col-sm-10">
+                            <input type="subject" class="form-control" id="subjectMarks4">
+                        </div>
+                    </div>
+                   <!-- when user click on the button-->
+                    <button class="btn btn-primary"  type="button" onclick="studentName()">Submit</button>
+
+                </form>
+                
+                <p class= "mt-5 ">Total : <span id="marks"></span>
+                                          
+                </p>
+                <p> Average : <span id ="avg"></span></p>
+
+                <p> Student Name : <span id="name"></span></p>
+
+
+            
+                
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
+
+   <script>
+       function studentName() {
+         var usertext =  document.getElementById('username').value;
+
+         document.getElementById('name').innerHTML= usertext;
+         
+         var sub1 = document.getElementById('subjectMarks1').value;
+
+         var sub2 = document.getElementById('subjectMarks2').value;
+          
+         var sub3 = document.getElementById('subjectMarks3').value;
+
+         var sub4 = document.getElementById('subjectMarks4').value;
+
+        var sum = parseInt(sub1) + parseInt(sub2) + parseInt(sub3) + parseInt(sub4);
+
+         document.getElementById('marks').innerHTML = sum;
+
+        var avg =sum/4;
+
+        document.getElementById('avg').innerHTML= avg;
+       }
+   </script>
+
+
+</body>
+
+</html>
